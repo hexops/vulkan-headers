@@ -28,5 +28,6 @@ git diff $(git merge-base origin/main upstream/main)..origin/main \
     --diff-filter=d \
     ':(exclude)README.md' \
     ':(exclude)build.zig' \
-    ':(exclude).gitignore'
+    ':(exclude).gitignore' \
+    ':(exclude)stub.c'
 ```
