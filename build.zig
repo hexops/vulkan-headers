@@ -14,6 +14,5 @@ pub fn build(b: *std.Build) void {
     inline for (.{ "vk_video", "vulkan" }) |subdir| {
         lib.installHeadersDirectory("include/" ++ subdir, subdir);
     }
-
-    lib.install();
+    b.installArtifact(lib);
 }
