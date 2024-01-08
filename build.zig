@@ -6,7 +6,7 @@ pub fn build(b: *std.Build) void {
 
     const lib = b.addStaticLibrary(.{
         .name = "vulkan-headers",
-        .root_source_file = .{ .path = b.addWriteFiles().add("empty.c", "") },
+        .root_source_file = b.addWriteFiles().add("empty.c", ""),
         .target = target,
         .optimize = optimize,
     });
